@@ -35,24 +35,27 @@ elemento del mismo) y dos «corrientes» de bytes para la entrada y la salida.
 
 #### BNF
 
+```
 <programa> ::= <instrucción> | <programa> <instrucción>
-
 <instrucción> ::= ">" | "<" | "+" | "-" | "." | "," | <ciclo>
-
 <ciclo> ::= "[" <programa> "]"
+```
+
 
 
 #### EBNF
 
-programa: instrucción> { <instrucción> }*
+```
+<programa>: instrucción> { <instrucción> }*
 
 <instrucción> ::= ">" | "<" | "+" | "-" | "." | "," | <ciclo>
 
 <ciclo> ::= "[" programa "]"
-
+```
 
 #### ABNF
 
+```
 programa: instrucción
           programa instrucción
 
@@ -60,3 +63,4 @@ instrucción: uno de **">" "<" "+"  "-" "."  ","  ciclo**
 
 ciclo: "[" programa "]"
 
+```
