@@ -31,12 +31,19 @@ elemento del mismo) y dos «corrientes» de bytes para la entrada y la salida.
 | `]`      | Retrocede a la instrucción posterior al `[`<br>si el byte apuntado no es 0.          | `}`                  |
 
 
-#### Gramática
+#### GIC (Gramática independiente del contexto)
 
-#### BNF
+programa -> instrucción> | programa instrucción
+
+instrucción -> ">" | "<" | "+" | "-" | "." | "," | ciclo
+
+ciclo -> "[" programa "]"
+
+
+#### BNF (Backus Naur Form)
 
 ```
-<programa> ::= <instrucción> | <programa> <instrucción>
+<programa> ::= ε | <instrucción> | <programa> <instrucción>
 
 <instrucción> ::= ">" | "<" | "+" | "-" | "." | "," | <ciclo>
 
@@ -44,22 +51,20 @@ elemento del mismo) y dos «corrientes» de bytes para la entrada y la salida.
 ```
 
 
-
-#### EBNF
+#### EBNF (Extended BNF)
 
 ```
-<programa>: <instrucción> { <instrucción> }*
+<programa>: { <instrucción> }*
 
 <instrucción> ::= ">" | "<" | "+" | "-" | "." | "," | <ciclo>
 
 <ciclo> ::= "[" programa "]"
 ```
 
-#### ABNF
+#### ABNF (Augmented BNF)
 
 ```
-programa: instrucción
-          programa instrucción
+programa: { instrucción _op}
 
 instrucción: uno de ">" "<" "+"  "-" "."  ","  ciclo
 
