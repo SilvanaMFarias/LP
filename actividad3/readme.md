@@ -33,12 +33,13 @@ elemento del mismo) y dos «corrientes» de bytes para la entrada y la salida.
 
 #### GIC (Gramática independiente del contexto)
 
+```
 programa -> instrucción> | programa instrucción
 
 instrucción -> ">" | "<" | "+" | "-" | "." | "," | ciclo
 
 ciclo -> "[" programa "]"
-
+```
 
 #### BNF (Backus Naur Form)
 
