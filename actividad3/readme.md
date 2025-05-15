@@ -41,6 +41,14 @@ instrucción -> ">" | "<" | "+" | "-" | "." | "," | ciclo
 ciclo -> "[" programa "]"
 ```
 
+### Producciones
+
+```
+P -> PI | I | ε
+R ->  > | < | + | - | . | , | C
+C -> [ P ]
+```
+
 #### BNF (Backus Naur Form)
 
 ```
