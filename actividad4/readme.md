@@ -84,7 +84,7 @@ Celda 1: 32
 
 ### Árbol sintáctico
 
-![Arbol sintactico](arbolsintactico.jpg)
+![Arbol sintactico](arbolsintactico2.jpg)
 
 
 ### Diagramas sintácticos
