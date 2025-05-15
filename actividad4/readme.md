@@ -77,17 +77,18 @@ Celda 1: 32
 - Salida visible: nada (se imprime carácter nulo)
 - Efecto del programa: transfiere el valor de la celda 0 a la celda 1 y deja la celda 0 en cero.
 
+### ,[>+<-].
 
 ### Árbol sintáctico
 
-![Arbol sintactico](arbolsintactico.png)
+![Arbol sintactico](arbolsintactico.jpg)
 
 
 ### Diagramas sintácticos
 
-![Diagrama de Programa](dsprograma.png)
-![Diagrama de Instrucción](dsinstruccion.png)
-![Diagrama de Ciclo](dsciclo.png)
+![Diagrama de Programa](dsprograma.jpg)
+![Diagrama de Instrucción](dsinstruccion.jpg)
+![Diagrama de Ciclo](dsciclo.jpg)
 
 
 
