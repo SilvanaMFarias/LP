@@ -4,7 +4,7 @@ Realizar el árbol de análisis sintáctico de un programa fuente, y por cada pr
 
 ### Lenguaje seleccionado: Brainfuck
 
-### Programa en Brainfuck  `,[>+<-].`
+### Programa en Brainfuck  `,[>+<-]>.`
 
 Suponemos que el usuario introduce un espacio (`' '`), cuyo valor ASCII es 32.
 
@@ -62,9 +62,12 @@ Después de 32 iteraciones:
 Celda 0: 0
 Celda 1: 32
 
+#### `>` — Mover a la derecha
+- El puntero se mueve a la celda 1.
+
 #### `.` — Imprimir salida
-- Se imprime el carácter ASCII correspondiente al valor de la celda actual (celda 0).
-- Como la celda 0 vale 0, se imprime el carácter ASCII 0, que no es visible (carácter nulo).
+- Se imprime el carácter ASCII correspondiente al valor de la celda actual (celda 1).
+- Como la celda vale 32, se imprime el carácter ASCII espacio.
 
 ####  Resultado final
 
@@ -74,10 +77,10 @@ Celda 1: 32
 | Celda 1 | 32    |
 
 - Entrada: espacio (`' '` → ASCII 32)
-- Salida visible: nada (se imprime carácter nulo)
+- Salida visible: Caracter espacio
 - Efecto del programa: transfiere el valor de la celda 0 a la celda 1 y deja la celda 0 en cero.
 
-### ,[>+<-].
+### Programa en Brainfuck  `,[>+<-]>.`
 
 ### Árbol sintáctico
 
