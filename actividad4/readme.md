@@ -9,13 +9,13 @@ Realizar el árbol de análisis sintáctico de un programa fuente, y por cada pr
 Suponemos que el usuario introduce un espacio (`' '`), cuyo valor ASCII es 32.
 
 #### Estado inicial
-- La memoria es una cinta infinita de celdas, todas inicializadas en 0.
+- La memoria es un vector, donde todas sus celdas están inicializadas en 0.
 - El puntero comienza en la celda 0.
 
 #### `,` — Leer entrada
-- Se lee un carácter desde la entrada estándar.
-- En este caso, el usuario ingresa un espacio (`' '`, ASCII 32).
-- Ese valor (32) se guarda en la celda 0.
+- Se lee un caracter desde la entrada estándar.
+- Suponemos que el usuario ingresa un espacio (`' '`, ASCII 32).
+- Ese valor (32) se almacena en la posición 0.
 
 Estado de memoria:
 Celda 0: 32
