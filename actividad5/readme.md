@@ -7,7 +7,7 @@
 Es la asociación entre los parámetros formales (los que se declaran en la definición de una función o procedimiento) y los parámetros reales (los que se pasan al invocar dicha función o procedimiento).
 
 | Binding |  | Descripión | Estático | Dinámico | Ejemplo dinámico |
-| -- | -- | -- | -- | -- |
+| --- | --- | --- | --- | --- | --- |
 | Valor A1  | El patrón de bits almacenado en la celda asociada a la variable  | Se pasa una copia del valor del parámetro real al parámetro formal. Los cambios en el parámetro formal no afectan al real | C, C++, Pascal, Java, Kotlin  | Python, JavaScript, PHP, Lua, Ruby  | Valor A6  | function saludar({nombre, edad}) {console.log(`Hola ${nombre}, tienes ${edad} años`);} saludar({edad: 25, nombre: "Ana"}); |
 | Valor B1  | Valor B2  | Valor B3  | Valor B4  | Valor B5  | Valor B6  |
 
