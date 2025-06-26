@@ -10,11 +10,13 @@ Rizado es un lenguaje de programación diseñado para describir la rutina de pei
 Permite manejar expresiones, selección e iteración.
 Un programa tiene una estructura de la forma:
 
-INICIO  
-Declaración
-Asignación
-[Bloques_opcionales]
+```
+INICIO
+<Declaración>
+<Asignación>
+<Bloques Opcionales>
 FIN
+```
 
 Tipos de datos
 
@@ -24,7 +26,7 @@ Valores posibles: ondulado, enrulado.
 entero: representa cantidades enteras entre 0 y 9, usadas para especificar la cantidad de repeticiones de la acción hacer Scrunch.
 
 
-#### Variables obligatorias
+### Variables obligatorias
 
 El programa trabaja con exactamente 2 variables fijas, cuyos nombres y tipos son:
 
@@ -32,7 +34,7 @@ tipo: representa el tipo del cabello (tipo tipoPelo).
 vecesScrunch: representa la cantidad de veces que se realiza la acción de scrunch (tipo entero valor mayor o igual a cero).
 
 
-#### Estructura del programa
+### Estructura del programa
 
 Antes de que el programa comience a ejecutar cualquier bloque de código, las dos variables obligatorias (estado, vecesScrunch) deben estar asignadas con un valor válido.
 Puede no ejecutarse ninguna sentencia luego, y no dará error.
@@ -76,6 +78,8 @@ El no realizar secado implica que este paso se omite.
 
 ### Posible BNF
 
+```ebnf
+
 <programa> ::= "INICIO" <declaraciones> <asignaciones> <bloques_opcionales> "FIN"
 
 <declaraciones> ::= <declaracion_tipo_pelo> <declaracion_vecesScrunch>
@@ -112,3 +116,4 @@ El no realizar secado implica que este paso se omite.
 
 <secar> ::= "plopping | "secador_de_pelo" | "plopping" "secador_de_pelo"
 
+```
