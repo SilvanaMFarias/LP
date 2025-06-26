@@ -112,7 +112,7 @@ El no realizar secado implica que este paso se omite.
 
 <lista_productos> ::= "crema_para_peinar" | "gel" | "crema_para_peinar" "gel"
 
-<definir> ::= "peinar" | <bloque_iteracion_scrunch> | "peinar" "scrunch"
+<definir> ::= "peinar" | <bloque_iteracion_scrunch> | "peinar" <bloque_iteracion_scrunch>
 
 <secar> ::= "plopping | "secador_de_pelo" | "plopping" "secador_de_pelo"
 
