@@ -10,3 +10,4 @@ A continuación, podés acceder a cada actividad:
 - [Actividad 3: GIC, BNF, EBNF Y ABNF de un lenguaje esotérico](./actividad3/readme.md)
 - [Actividad 4: Árbol sintáctico y diagrama sintáctico del lenguaje previamente seleccionado](./actividad4/readme.md)
 - [Actividad 5: Semántica - Parámetros](./actividad5/readme.md)
+- [Definición de un lenguaje de programación](./actividad6/readme.md)
