@@ -6,44 +6,65 @@ Definir un lenguaje de programación en lenguaje natural. Tiene que poder maneja
 
 ### Lenguaje de programación: Rizado
 
-Rizado es un lenguaje de programación diseñado para describir la rutina de peinado de una persona con ondas o rulos a partir del lavado del mismo.
+Rizado es un lenguaje de programación diseñado para describir la rutina de peinado de una persona con ondas o rulos después del lavado del mismo.
 Permite manejar expresiones, selección e iteración.
-Un programa tiene una estructura de la forma:
 
-```
-INICIO
-<Declaración>
-<Asignación>
-<Bloques Opcionales>
-FIN
-```
+### Tipos de datos
 
-Tipos de datos
+El lenguaje maneja dos tipos de datos:
 
 tipoPelo: describe el tipo de cabello.
 Valores posibles: ondulado, enrulado.
 
-entero: representa cantidades enteras entre 0 y 9, usadas para especificar la cantidad de repeticiones de la acción hacer Scrunch.
+numero: representa cantidades enteras entre 0 y 9, usadas para especificar la cantidad de repeticiones de la acción hacerScrunch.
 
 
 ### Variables obligatorias
 
-El programa trabaja con exactamente 2 variables fijas, cuyos nombres y tipos son:
+El programa trabaja con exactamente 2 variables de nombre y tipo fijos:
 
-tipo: representa el tipo del cabello (tipo tipoPelo).
-vecesScrunch: representa la cantidad de veces que se realiza la acción de scrunch (tipo entero valor mayor o igual a cero).
+Nombres
 
+tipoP: representa el tipo del cabello (tipo tipoPelo).
+vecesScrunch: representa la cantidad de veces que se realiza la acción de scrunch (tipo numero).
+
+La forma de declarar las variables es la siguiente:
+
+nombreVariable ":" tipoDeDato;
+
+Ejemplo:
+tipoP ":" tipoPelo;       (tipo de dato nuevo)
+vecesScrunch ":" entero;  (tipo de dato nativo)
+
+La forma asignar valor a las variables es la siguiente:
+
+tipoP "=" ondulado;
+vecesScrunch "=" 5;
+
+Cada una de las líneas de declaración o asignación de las variables finalizan con un ";"
+Primero se realiza la declaración de la variables, y luego se les asigna valor.
 
 ### Estructura del programa
 
-Antes de que el programa comience a ejecutar cualquier bloque de código, las dos variables obligatorias (estado, vecesScrunch) deben estar asignadas con un valor válido.
-Puede no ejecutarse ninguna sentencia luego, y no dará error.
+Un programa tiene una estructura de la forma:
 
+```
+INICIO
+<declaraciones>
+<asignaciones>
+<bloques opcionales>
+FIN
+```
+donde INICIO y FIN son palabras reservadas que indican el comienzo y fin del programa.
+
+
+Antes de que el programa comience a ejecutar cualquier bloque de código, las dos variables obligatorias (tipoP, vecesScrunch) deben estar declaradas, y tienen que tener asignadas un valor válido.
+Puede no ejecutarse ningun bloque luego, y no dará error.
 
 De continuar, el programa puede hacer dos cosas:
 
-* Usar un condicional, según el tipo de pelo, para establecer una rutina de cuidado para cada uno.
-* Ejecutar una rutina.
+* Usar un condicional, que compara por igualdad o desigualdad contra el valor de la variable tipoP (ondulado, enrulado), y establecer una rutina de cuidado para cada uno. 
+* Ejecutar una rutina sin realizar ninguna verificación.
 
 La rutina de cuidado, tiene 3 pasos principales se ejecutan en orden:
 
@@ -56,7 +77,7 @@ La rutina de cuidado, tiene 3 pasos principales se ejecutan en orden:
 El no aplicar ningún producto implica que este paso se omite.
 
 
-2. Definición
+2. Definir
 
 * Peinar
 * Hacer scrunch un número determinado de veces (definido por la variable vecesScrunch) (Acá se usaría la iteración)
@@ -66,7 +87,7 @@ El no aplicar ningún producto implica que este paso se omite.
 El no realizar ningún producto implica que este paso se omite.
 
 
-3. Secado
+3. Secar
 
 * Plopping
 * Secador de pelo
@@ -78,42 +99,80 @@ El no realizar secado implica que este paso se omite.
 
 ### Posible BNF
 
-```ebnf
+```
 
-<programa> ::= "INICIO" <declaraciones> <asignaciones> <bloques_opcionales> "FIN"
+<programa> ::= "INICIO" <declaraciones> <asignaciones> <bloquesOpcionales> "FIN"
 
-<declaraciones> ::= <declaracion_tipo_pelo> <declaracion_vecesScrunch>
-<declaracion_tipo_pelo> ::= "tipo" ":" "tipoPelo"
-<declaracion_vecesScrunch> ::= "vecesScrunch" ":" "entero"
+<declaraciones> ::= <declaracionTipoP>";" <declaracionVecesScrunch>";"
+<declaracionTipoP> ::= "tipoP" ":" "tipoPelo"
+<declaracionVecesScrunch> ::= "vecesScrunch" ":" entero
 
-<asignaciones> ::= <asignacion_tipo> <asignacion_vecesScrunch>
-<asignacion_tipo> ::= "tipo" "=" <tipo_valor>
-<asignacion_vecesScrunch> ::= "vecesScrunch" "=" <digito>
+<asignaciones> ::= <asignacionTipoP> <asignacionVecesScrunch>
+<asignacionTipop> ::= "tipoP" "=" <valorTipoPelo>
+<asignacion_vecesScrunch> ::= "vecesScrunch" "=" <numero>
 
-<tipo_valor> ::= "ondulado" | "enrulado"
-<digito> ::= "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9"
+<valorTipoPelo> ::= "ondulado" | "enrulado"
+<numero> ::= "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9"
 
-<bloques_opcionales> ::= <bloque_condicional> | <rutina> | ε
+<bloquesOpcionales> ::= <bloqueCondicional> | <rutina> | ε
 
-<bloque_condicional> ::= "SI" <condicion_tipo> "ENTONCES" <rutina> <sino_opcional> "FIN_SI"
-<sino_opcional> ::= "SINO" <rutina> | ε
-<condicion_tipo> ::= "tipo" "==" <tipo_valor>
+<bloqueCondicional> ::= "SI" <condicion_tipo> "ENTONCES" "{" <rutina> "}" <sinoOpcional> "FINSI" ";"
+<sinoOpcional> ::= "SINO" "{" <rutina> "}" | ε
+<condicionTipo> ::= "(" "tipoP" <operador> <valorTipoPelo> ")"
+<operador> ::= "==" | "<>"
 
-<bloque_iteracion_scrunch> ::= "REPETIR" "vecesScrunch" "VECES" <accion_scrunch> "FIN_REPETIR"
-<accion_scrunch> ::= "scrunch"
+<rutina> ::= <bloqueAplicar> <bloqueDefinir> <bloqueSecar>
 
-<rutina> ::= <bloque_aplicar> <bloque_definir> <bloque_secar>
+<bloqueAplicar> ::= <aplicarProducto> | ε
+<bloqueDefinir> ::= <definir> | ε
+<bloqueSecar> ::= <secar> | ε
 
-<bloque_aplicar> ::= <aplicar_producto> | ε
-<bloque_definir> ::= <definir> | ε
-<bloque_secar> ::= <secar> | ε
+<aplicarProducto> ::= <listaProductos> ";"
 
-<aplicar_producto> ::= "aplicar" <lista_productos>
+<listaProductos> ::= "cremaParaPeinar"  | "gel"| "cremaParaPeinar" ";" "gel" 
 
-<lista_productos> ::= "crema_para_peinar" | "gel" | "crema_para_peinar" "gel"
+<definir> ::= "peinar" ";" | <bloqueIteracionScrunch> | "peinar" ";" <bloqueIteracionScrunch> ";"
+<bloqueIteracionScrunch> ::= "REPETIR" "vecesScrunch" "VECES" <accionScrunch> "FINREPETIR" ";"
+<accionScrunch> ::= "scrunch"
 
-<definir> ::= "peinar" | <bloque_iteracion_scrunch> | "peinar" <bloque_iteracion_scrunch>
+<secar> ::= "plopping" ";" | "secadorDePelo" ";" | "plopping" ";" "secadorDePelo" ";"
 
-<secar> ::= "plopping | "secador_de_pelo" | "plopping" "secador_de_pelo"
+```
+
+```
+Ejemplo programa:
+
+INICIO
+tipoP : tipoPelo;
+vecesScrunch : entero;
+tipoP = ondulado;
+vecesScrunch = 5;
+SI ( tipoP == ondulado) ENTONCES 
+{
+cremaParaPeinar; 
+REPETIR vecesScrunch VECES scrunch FINREPETIR;
+}
+SINO {
+cremaParaPeinar;
+gel;
+secadorDePelo;
+}
+FINSI;
+FIN
+```
+
+Otro ejemplo:
+
+```
+INICIO
+tipoP : tipoPelo;
+vecesScrunch : entero;
+tipoP = ondulado;
+vecesScrunch = 2;
+cremaParaPeinar;
+gel;
+plopping;
+secadorDePelo;
+FIN
 
 ```
