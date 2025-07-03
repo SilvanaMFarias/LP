@@ -9,32 +9,31 @@ Definir un lenguaje de programación en lenguaje natural. Tiene que poder maneja
 Rizado es un lenguaje de programación diseñado para describir la rutina de peinado de una persona con ondas o rulos después del lavado del mismo.
 Permite manejar expresiones, selección e iteración.
 
-### Tipos de datos
-
-El lenguaje maneja dos tipos de datos:
-
-tipoPelo: describe el tipo de cabello.
-Valores posibles: ondulado, enrulado.
-
-numero: representa cantidades enteras entre 0 y 9, usadas para especificar la cantidad de repeticiones de la acción hacerScrunch.
-
 
 ### Variables obligatorias
 
 El programa trabaja con exactamente 2 variables de nombre y tipo fijos:
 
-Nombres
+#### Nombres
 
-tipoP: representa el tipo del cabello (tipo tipoPelo).
-vecesScrunch: representa la cantidad de veces que se realiza la acción de scrunch (tipo numero).
+tipoP: representa el tipo del cabello.
+vecesScrunch: representa la cantidad de veces que se realiza la acción de scrunch.
 
-La forma de declarar las variables es la siguiente:
+#### Tipos de datos
+
+tipoPelo: describe el tipo de cabello (TIPO NUEVO)
+entero: tipo de dato nativo (int)
+
+Forma de declaración:
 
 nombreVariable ":" tipoDeDato;
 
 Ejemplo:
 tipoP ":" tipoPelo;       (tipo de dato nuevo)
 vecesScrunch ":" entero;  (tipo de dato nativo)
+
+tipoP - Valores posibles: ondulado o enrulado
+numero - valores posibles: enteros del 0 al 9
 
 La forma asignar valor a las variables es la siguiente:
 
@@ -174,5 +173,4 @@ gel;
 plopping;
 secadorDePelo;
 FIN
-
 ```
