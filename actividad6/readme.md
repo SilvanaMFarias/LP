@@ -106,9 +106,9 @@ El no realizar secado implica que este paso se omite.
 <declaracionTipoP> ::= "tipoP" ":" "tipoPelo"
 <declaracionVecesScrunch> ::= "vecesScrunch" ":" entero
 
-<asignaciones> ::= <asignacionTipoP> <asignacionVecesScrunch>
+<asignaciones> ::= <asignacionTipoP> ";" <asignacionVecesScrunch> ";"
 <asignacionTipop> ::= "tipoP" "=" <valorTipoPelo>
-<asignacion_vecesScrunch> ::= "vecesScrunch" "=" <numero>
+<asignacionVecesScrunch> ::= "vecesScrunch" "=" <numero>
 
 <valorTipoPelo> ::= "ondulado" | "enrulado"
 <numero> ::= "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9"
