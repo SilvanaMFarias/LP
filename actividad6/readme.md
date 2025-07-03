@@ -15,12 +15,12 @@ Permite manejar expresiones, selección e iteración.
 El programa trabaja con exactamente 2 variables de nombre y tipo fijos:
 
 #### Nombres
-
+```
 tipoP: representa el tipo del cabello.
 vecesScrunch: representa la cantidad de veces que se realiza la acción de scrunch.
-
+```
 #### Tipos de datos
-
+```
 tipoPelo: describe el tipo de cabello (TIPO NUEVO)
 entero: tipo de dato nativo (int)
 
@@ -42,7 +42,7 @@ vecesScrunch "=" 5;
 
 Cada una de las líneas de declaración o asignación de las variables finalizan con un ";"
 Primero se realiza la declaración de la variables, y luego se les asigna valor.
-
+```
 ### Estructura del programa
 
 Un programa tiene una estructura de la forma:
